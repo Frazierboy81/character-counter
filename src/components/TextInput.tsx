@@ -1,0 +1,14 @@
+ interface TextInputProps {
+    onTextChange: (text: string) => void;
+    placeholder?: string;
+    initialValue?: string;
+}
+
+function TextInput({onTextChange}: TextInputProps) {
+
+    return  (<div>
+                <input type="text" placeholder="Enter text" onChange={(e) => onTextChange(e.target.value)} />
+            </div>)
+}
+
+export default TextInput;
