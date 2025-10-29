@@ -7,7 +7,8 @@
 function TextInput({onTextChange}: TextInputProps) {
 
     return  (<div>
-                <input type="text" placeholder="Enter text" onChange={(e) => onTextChange(e.target.value)} />
+                <textarea 
+                placeholder="Enter text here..." onChange={(e) => onTextChange(e.target.value)} />
             </div>)
 }
 

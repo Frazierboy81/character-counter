@@ -2,8 +2,9 @@
 import './App.css';
 import ColorPicker from './components/ColorPicker';
 import ContentSwitcher from './components/ContentSwitcher';
-
+import CharacterCounter from './components/CharacterCounter';
 import Toggler from './components/Toggler';
+
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
       <ColorPicker/>
       <Toggler/>
       <ContentSwitcher/>
+      <CharacterCounter/>
+      
     </div>
   )
 }
