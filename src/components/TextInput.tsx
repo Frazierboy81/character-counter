@@ -4,12 +4,14 @@
     initialValue?: string;
 }
 
-function TextInput({onTextChange}: TextInputProps) {
+function TextInput({onTextChange, placeholder, initialValue}: TextInputProps) {
 
-    return  (<div>
-                <textarea 
-                placeholder="Enter text here..." onChange={(e) => onTextChange(e.target.value)} />
-            </div>)
-}
+    return  (
+            <div>
+                <textarea className="h-42 border rounded-md"
+                placeholder={placeholder} onChange={(e) => onTextChange(e.target.value)} value={initialValue}/>
+            </div>
+            );
+        }
 
 export default TextInput;

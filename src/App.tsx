@@ -1,9 +1,9 @@
 
 import './App.css';
-import ColorPicker from './components/ColorPicker';
-import ContentSwitcher from './components/ContentSwitcher';
 import CharacterCounter from './components/CharacterCounter';
-import Toggler from './components/Toggler';
+// import ColorPicker from './components/ColorPicker';
+// import ContentSwitcher from './components/ContentSwitcher';
+// import Toggler from './components/Toggler';
 
 
 
@@ -13,9 +13,9 @@ function App() {
     <div>
       <h1>Character Counter App</h1>
 
-      <ColorPicker/>
+      {/* <ColorPicker/>
       <Toggler/>
-      <ContentSwitcher/>
+      <ContentSwitcher/> */}
       <CharacterCounter/>
       
     </div>

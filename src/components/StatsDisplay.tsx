@@ -1,25 +1,35 @@
 import { useState } from "react";
 
-function StatsDisplay() {
-    const [characterCount, setCharacterCount] = useState(0)
-        const handleCount = (newCount: number) => {
-            setCharacterCount(newCount ++);
-        }
+export interface TextStats {
+    characterCount: number;
+    wordCount: number;
+    readingTime: number;
+}
 
-            if (characterCount > 0) {
-                return handleCount
-            }
+    export interface StatsDisplayProps {
+        stats: TextStats;
+        showReadingTime?: boolean
+    }
 
-
+function StatsDisplay({stats, showReadingTime = true}: StatsDisplayProps) {
+    
+    const {characterCount, wordCount, readingTime} = stats
+        
 
     return (
         <div>
             <h3>Stats</h3>
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-around"}}>
-            <p>Characters</p>
-            <p>Words</p>
-            <p>Reading Time</p>
+            <div className="flex flex-col">Characters: {characterCount}</div>
+            <div>Words {wordCount}</div>
+            <div>Reading Time</div>
+
+            {showReadingTime && <div>Reading Time: {Math.ceil(readingTime)}</div>}
+            
         </div>
+        
+        <div style={{display: 'flex', justifyContent: "space-around"}}>  {readingTime}</div>
+        <div></div>
 
         </div>
     )
